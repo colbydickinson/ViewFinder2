@@ -41,6 +41,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="gjl-fG-IPt" kind="show" identifier="moveToDetail" id="DdL-Mv-szm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5P9-E5-vSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,6 +138,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IFh-Mk-pMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-26.086956521739133" y="107.8125"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="DJb-ti-5G9">
+            <objects>
+                <viewController id="gjl-fG-IPt" customClass="PhotoDetailViewController" customModule="ViewFinder2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ML3-nw-PLD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cqo-pv-Elf">
+                                <rect key="frame" x="22" y="158" width="370" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="370" id="P3u-y1-ReH"/>
+                                    <constraint firstAttribute="height" constant="300" id="hjK-jw-SFW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGb-81-bID">
+                                <rect key="frame" x="57" y="525" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="YLP-Rw-Jf1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PGb-81-bID" firstAttribute="top" secondItem="Cqo-pv-Elf" secondAttribute="bottom" constant="67" id="CXf-wd-BFk"/>
+                            <constraint firstItem="Cqo-pv-Elf" firstAttribute="top" secondItem="GSi-Qa-5Qv" secondAttribute="top" constant="70" id="P9I-qe-YZP"/>
+                            <constraint firstItem="PGb-81-bID" firstAttribute="centerX" secondItem="ML3-nw-PLD" secondAttribute="centerX" id="bqF-QS-Ug3"/>
+                            <constraint firstItem="Cqo-pv-Elf" firstAttribute="centerX" secondItem="ML3-nw-PLD" secondAttribute="centerX" id="sbT-17-tAS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GSi-Qa-5Qv"/>
+                    </view>
+                    <connections>
+                        <outlet property="captionDetail" destination="PGb-81-bID" id="arS-Jb-g9R"/>
+                        <outlet property="photoDetail" destination="Cqo-pv-Elf" id="4kM-SJ-wpj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jBb-O3-FeG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882.60869565217399" y="813.61607142857144"/>
         </scene>
     </scenes>
     <resources>
